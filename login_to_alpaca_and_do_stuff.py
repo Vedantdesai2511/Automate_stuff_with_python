@@ -20,7 +20,7 @@ def open_browser():
 
     time.sleep(1)  # The program just clicked on the login page so this sleep command is t give the webpage time to
     # redirect it to the login page
-    
+
     driver.find_elements_by_id("username")[0].click()  # Select the username text-box and click on it
 
     e = driver.find_elements_by_id("username")[0]  # store the username element is a variable
@@ -33,6 +33,15 @@ def open_browser():
 
     e.send_keys("Vedantdesai@25111996")  # Type in the password
     e.send_keys(Keys.RETURN)  # Press enter
+
+    time.sleep(2.5)  # wait for the webpage to redirect to the next page
+
+    driver.find_element_by_xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "fa-flask", " " ))]').click()
+    # select the "papper trading" element by x-path and click on it
+
+    e = driver.find_elements_by_xpath('rheyrhtv').click()  # crash the program so that the chrome window does not
+    # close after the program is done executing
+    print(e)
 
     driver.close()
 

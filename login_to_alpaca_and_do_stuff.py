@@ -20,6 +20,19 @@ def open_browser():
 
     time.sleep(1)  # The program just clicked on the login page so this sleep command is t give the webpage time to
     # redirect it to the login page
+    
+    driver.find_elements_by_id("username")[0].click()  # Select the username text-box and click on it
+
+    e = driver.find_elements_by_id("username")[0]  # store the username element is a variable
+
+    e.send_keys("vedantdesai07@gmail.com")  # Type in the email address
+
+    driver.find_elements_by_id("password")[0].click()  # Select the password text-box and click on it
+
+    e = driver.find_elements_by_id("password")[0]  # store the password element is a variable
+
+    e.send_keys("Vedantdesai@25111996")  # Type in the password
+    e.send_keys(Keys.RETURN)  # Press enter
 
     driver.close()
 
